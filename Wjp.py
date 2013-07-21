@@ -1,23 +1,26 @@
   
 
     class wjp:
-       
+        
         def main(self):
-            x= input( "Enter the capacity of first Water jug")
-            y=input("Enter the Capacity of the second water jug")
-            lol=input("Enter the amount you want in the first jug")
-            temp=self.hcf(x,y);
-            if temp%lol==0:
-                self.productionrules(x,y,lol);
+            x = input( "Enter the capacity of first Water jug")
+            y = input("Enter the Capacity of the second water jug")
+            goal = input("Enter the amount you want in the first jug")
+            jug = { 'fir': x, 'sec': y}
+            temp = self.hcf( jug['fir'] , jug['sec'])
+            if temp%lol == 0:
+                self.getSteps( jug['fir'], jug['sec'], goal)
             else: print "wrong input"
-        def hcf(self,no1,no2):  
-            while no1!=no2:  
-                if no1>no2:  
-                    no1-=no2  
+            
+        def hcf( self, no1, no2):  
+            while no1 != no2:  
+                if no1 > no2:  
+                    no1 -= no2  
                 elif no2>no1:  
-                    no2-=no1  
+                    no2 -= no1  
             return no1
-        def productionrules(self,a,b,lol):
+            
+        def getSteps( self, a, b, lol):
             x=0
             y=0
             if x<a:
