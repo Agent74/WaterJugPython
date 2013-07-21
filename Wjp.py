@@ -20,7 +20,7 @@
                     no2 -= no1  
             return no1
             
-        def getSteps( self, a, b, lol):
+        def getSteps( self, a, b, goal):
             x=0
             y=0
             if x<a:
