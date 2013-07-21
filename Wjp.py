@@ -8,7 +8,7 @@
             goal = input("Enter the amount you want in the first jug")
             jug = { 'fir': x, 'sec': y}
             temp = self.hcf( jug['fir'] , jug['sec'])
-            if temp%lol == 0:
+            if temp%goal== 0:
                 self.getSteps( jug['fir'], jug['sec'], goal)
             else: print "wrong input"
             
